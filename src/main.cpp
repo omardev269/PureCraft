@@ -34,7 +34,7 @@ namespace OpenCraft {
 	World* world;
 }
 #include <raycast.hpp>
-const unsigned renderDistance = 8;
+const unsigned renderDistance = 3;
 std::vector<ivec3> exceptionLista;
 std::vector<ivec3> exceptionList;
 #include <ElementHierarchy/gen.hpp>
@@ -154,4 +154,5 @@ int main() {
 	delete OpenCraft::gpu;
 	delete OpenCraft::instance;
 	return 2;
+
 }
