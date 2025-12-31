@@ -13,6 +13,7 @@
 #include <glm\gtc\matrix_transform.hpp>
 #include <glm\gtc\type_ptr.hpp>
 #include <print>
+//Note: use THIS MCGL, not the one from its repository
 namespace MCGL {
 	using namespace glm;
 	namespace UI {
@@ -512,7 +513,7 @@ namespace MCGL {
 				Update();
 				if (showOverlay) {
 					UI::Text("MCGL 0.1a", windowSize.x-325, 0, 6, 10);
-					if (showCopyright)UI::Text("Copyright (R) omardev269", windowSize.x - 325, 11, 6, 10);
+					if (showCopyright)UI::Text("Copyright (C) omardev269", windowSize.x - 325, 11, 6, 10);
 					UI::Text(std::format("FPS: {}", 1.0f / deltaTime), windowSize.x - 325, 22, 6, 10);
 					UI::Text(std::format("MOUSE POSITION: X{} Y{}", mousePosition[0], mousePosition[1]), windowSize.x - 325, 33, 6, 10);
 					UI::Text(std::format("{}", reinterpret_cast<const char*>(glGetString(GL_RENDERER))), windowSize.x - 325, 44, 6, 10);
@@ -528,4 +529,5 @@ namespace MCGL {
 		}
 	};
 }
+
 #endif 
