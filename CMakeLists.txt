@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.31)
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Release>:Release>")
 set(CMAKE_MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 set(CMAKE_INTERPROCEDURAL_OPTIMIZATION TRUE) #link time optimization
+set(PRODUCTION_BUILD FALSE)
 if(MSVC) 
 add_compile_options(/arch:SSE2) #make sure SIMD optimizations take place
 else ()
@@ -60,4 +61,5 @@ target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glfw)
 target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glad)
 target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE glm)
 target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE stb_image)
+
 target_link_libraries("${CMAKE_PROJECT_NAME}" PRIVATE imgui)
